@@ -41,7 +41,7 @@ func checkErr(err error) {
 	if err != nil {
 		// Выводим текст ошибки
 		fmt.Println(err)
-		fmt.Println("Ошибка связи")
+		fmt.Println("Ошибка связи.")
 
 		// Завершаем программу
 		os.Exit(1)
