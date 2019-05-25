@@ -24,7 +24,7 @@ func checkErr(err error) {
 	}
 }
 
-var connectAddr = &net.TCPAddr{IP: net.IPv4(192, 168, 0, 2), Port: 0}
+var connectAddr = &net.TCPAddr{IP: net.IPv4(127, 0, 0, 1), Port: 0}
 
 // Считываем с командной строки нужный нам порт и пытаемся соединится с сервером
 func connectTo() *net.TCPConn {
@@ -83,7 +83,7 @@ func main() {
 	c := connectTo()
 
 	// Буферизирует всё что приходит от соединения "c"
-	buf := bufio.NewReader(с)
+	buf := bufio.NewReader(c)
 
 	// Создаём приватный ключ в составе которого уже есть публичный ключ
 	k, err := rsa.GenerateKey(rand.Reader, keySize)
