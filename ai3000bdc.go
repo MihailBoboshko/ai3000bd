@@ -17,7 +17,7 @@ const (
 	readWriterSize = keySize / 8
 )
 
-func checkErr(err os.Error) {
+func checkErr(err error) {
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
